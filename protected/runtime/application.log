@@ -1,0 +1,67 @@
+2014/06/17 22:32:24 [error] [exception.CException] exception 'CException' with message 'Property "CWebApplication.bootstrap" is not defined.' in E:\site\localhost\www\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 E:\site\localhost\www\yii\framework\base\CModule.php(105): CComponent->__get('bootstrap')
+#1 E:\site\localhost\www\enterprise\themes\bootstrap\views\layouts\main.php(12): CModule->__get('bootstrap')
+#2 E:\site\localhost\www\yii\framework\web\CBaseController.php(126): require('E:\site\localho...')
+#3 E:\site\localhost\www\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('E:\site\localho...', Array, true)
+#4 E:\site\localhost\www\yii\framework\web\widgets\CContentDecorator.php(76): CBaseController->renderFile('E:\site\localho...', Array, true)
+#5 E:\site\localhost\www\yii\framework\web\widgets\CContentDecorator.php(54): CContentDecorator->decorate('<div id="conten...')
+#6 E:\site\localhost\www\yii\framework\web\widgets\COutputProcessor.php(44): CContentDecorator->processOutput('<div id="conten...')
+#7 E:\site\localhost\www\yii\framework\web\CBaseController.php(206): COutputProcessor->run()
+#8 E:\site\localhost\www\yii\framework\web\CBaseController.php(300): CBaseController->endWidget('CContentDecorat...')
+#9 E:\site\localhost\www\enterprise\protected\views\layouts\column1.php(6): CBaseController->endContent()
+#10 E:\site\localhost\www\yii\framework\web\CBaseController.php(126): require('E:\site\localho...')
+#11 E:\site\localhost\www\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('E:\site\localho...', Array, true)
+#12 E:\site\localhost\www\yii\framework\web\CController.php(784): CBaseController->renderFile('E:\site\localho...', Array, true)
+#13 E:\site\localhost\www\enterprise\protected\controllers\SiteController.php(32): CController->render('index')
+#14 E:\site\localhost\www\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionIndex()
+#15 E:\site\localhost\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#16 E:\site\localhost\www\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#17 E:\site\localhost\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 E:\site\localhost\www\yii\framework\web\CWebApplication.php(282): CController->run('index')
+#19 E:\site\localhost\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/index')
+#20 E:\site\localhost\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#21 E:\site\localhost\www\enterprise\index.php(13): CApplication->run()
+#22 {main}
+REQUEST_URI=/index.php?r=site/index
+HTTP_REFERER=http://enterprise.com/index.php?r=site/contact
+---
+2014/06/17 22:33:22 [error] [exception.CException] exception 'CException' with message 'Property "CWebApplication.bootstrap" is not defined.' in E:\site\localhost\www\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 E:\site\localhost\www\yii\framework\base\CModule.php(105): CComponent->__get('bootstrap')
+#1 E:\site\localhost\www\enterprise\themes\bootstrap\views\layouts\main.php(12): CModule->__get('bootstrap')
+#2 E:\site\localhost\www\yii\framework\web\CBaseController.php(126): require('E:\site\localho...')
+#3 E:\site\localhost\www\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('E:\site\localho...', Array, true)
+#4 E:\site\localhost\www\yii\framework\web\widgets\CContentDecorator.php(76): CBaseController->renderFile('E:\site\localho...', Array, true)
+#5 E:\site\localhost\www\yii\framework\web\widgets\CContentDecorator.php(54): CContentDecorator->decorate('<div id="conten...')
+#6 E:\site\localhost\www\yii\framework\web\widgets\COutputProcessor.php(44): CContentDecorator->processOutput('<div id="conten...')
+#7 E:\site\localhost\www\yii\framework\web\CBaseController.php(206): COutputProcessor->run()
+#8 E:\site\localhost\www\yii\framework\web\CBaseController.php(300): CBaseController->endWidget('CContentDecorat...')
+#9 E:\site\localhost\www\enterprise\protected\views\layouts\column1.php(6): CBaseController->endContent()
+#10 E:\site\localhost\www\yii\framework\web\CBaseController.php(126): require('E:\site\localho...')
+#11 E:\site\localhost\www\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('E:\site\localho...', Array, true)
+#12 E:\site\localhost\www\yii\framework\web\CController.php(784): CBaseController->renderFile('E:\site\localho...', Array, true)
+#13 E:\site\localhost\www\enterprise\protected\controllers\SiteController.php(32): CController->render('index')
+#14 E:\site\localhost\www\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionIndex()
+#15 E:\site\localhost\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#16 E:\site\localhost\www\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#17 E:\site\localhost\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 E:\site\localhost\www\yii\framework\web\CWebApplication.php(282): CController->run('index')
+#19 E:\site\localhost\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/index')
+#20 E:\site\localhost\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#21 E:\site\localhost\www\enterprise\index.php(13): CApplication->run()
+#22 {main}
+REQUEST_URI=/index.php?r=site/index
+HTTP_REFERER=http://enterprise.com/index.php?r=site/contact
+---
+2014/06/17 22:38:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "workinprogress".' in E:\site\localhost\www\yii\framework\web\CController.php:483
+Stack trace:
+#0 E:\site\localhost\www\yii\framework\web\CController.php(270): CController->missingAction('workinprogress')
+#1 E:\site\localhost\www\yii\framework\web\CWebApplication.php(282): CController->run('workinprogress')
+#2 E:\site\localhost\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/workinprog...')
+#3 E:\site\localhost\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 E:\site\localhost\www\enterprise\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php?r=site/workinprogress&id=
+HTTP_REFERER=http://enterprise.com/index.php?r=site/login
+---
