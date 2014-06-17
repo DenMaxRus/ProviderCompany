@@ -22,19 +22,20 @@
                 array('label'=>'На главную', 'url'=>array('/site/index')),
                 array('label'=>'О сайте', 'url'=>array('/site/page', 'view'=>'about')),
                 array('label'=>'Контакты', 'url'=>array('/site/contact')),
-                array('label'=>'Логин', 'url'=>array('/site/login'), /*'visible'=>Yii::app()->user->isGuest, */),
+                array('label'=>'Логин', 'url'=>array('/site/login'), 'visible'=>Yii::app()->user->isGuest,),
             	array('label'=>'Функции', 'items'=>array(
-					array('label'=>'Общая плата за месяц', 'url'=>array('/functions/payment', 'id'=>Yii::app()->user->id)),
+					array('label'=>'Общая плата за месяц', 'url'=>array('/site/workinprogress', 'id'=>Yii::app()->user->id)),
 					array('label'=>'Задолженность', 'url'=>array('/site/workinprogress', 'id'=>Yii::app()->user->id)),
-					array('label'=>'Выручка по услугам', 'url'=>array('/functions/profit'), /*'visible'=>Yii::app()->user->checkAccess('profit'),*/),
+					array('label'=>'Выручка по услугам', 'url'=>array('/site/workinprogress'), /*'visible'=>Yii::app()->user->isGuest,/*'visible'=>Yii::app()->user->checkAccess('profit'),*/),
             		), /*'visible'=>!Yii::app()->user->isGuest,*/
 				),
             	array('label'=>'Работа с таблицами','items'=>array(
-					array('label'=>'Клиенты', 'url'=>array('/client/admin')),
+					array('label'=>'Клиенты', 'url'=>array('/user/admin')),
                     array('label'=>'Услуги', 'url'=>array('/service/admin')),
                     array('label'=>'Контракты', 'url'=>array('/contract/admin')),
                     array('label'=>'Трафик', 'url'=>array('/traffic/admin')),
-					), /*'visible'=>Yii::app()->user->checkAccess('editTables'),*/
+					array('label'=>'Операции', 'url'=>array('/operation/admin')),
+					), /*'visible'=>Yii::app()->user->isGuest,/*'visible'=>Yii::app()->user->checkAccess('editTables'),*/
 				),
                 array('label'=>'Выход ('.Yii::app()->user->name.')', 'url'=>array('/site/logout'), /*'visible'=>!Yii::app()->user->isGuest,*/)
             ),
