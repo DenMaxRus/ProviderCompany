@@ -58,10 +58,10 @@ class Operation extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			'date' => 'Date',
-			'userid' => 'Userid',
-			'serviceid' => 'Serviceid',
-			'amount' => 'Amount',
+			'date' => 'Дата',
+			'userid' => 'ID Клиента',
+			'serviceid' => 'ID Услуги',
+			'amount' => 'Количество',
 		);
 	}
 

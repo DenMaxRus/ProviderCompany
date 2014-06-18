@@ -59,9 +59,9 @@ class Contract extends CActiveRecord
 	{
 		return array(
 			'id' => 'ID',
-			'userid' => 'Userid',
-			'serviceid' => 'Serviceid',
-			'account' => 'Account',
+			'userid' => 'ID Клиента',
+			'serviceid' => 'ID Услуги',
+			'account' => 'Остаток',
 		);
 	}
 

@@ -15,9 +15,11 @@
 <body>
 
 <?php $this->widget('bootstrap.widgets.TbNavbar',array(
+	'type'=>'inverse',
     'items'=>array(
         array(
             'class'=>'bootstrap.widgets.TbMenu',
+			'type'=>'tabs',
             'items'=>array(
                 array('label'=>'На главную', 'url'=>array('/site/index')),
                 array('label'=>'О сайте', 'url'=>array('/site/page', 'view'=>'about')),
@@ -37,7 +39,7 @@
 					array('label'=>'Операции', 'url'=>array('/operation/admin')),
 					), /*'visible'=>Yii::app()->user->isGuest,/*'visible'=>Yii::app()->user->checkAccess('editTables'),*/
 				),
-                array('label'=>'Выход ('.Yii::app()->user->name.')', 'url'=>array('/site/logout'), /*'visible'=>!Yii::app()->user->isGuest,*/)
+                array('label'=>'Выход ('.Yii::app()->user->model->firstname.' '.Yii::app()->user->model->lastname.')', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest,)
             ),
         ),
     ),

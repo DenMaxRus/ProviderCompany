@@ -18,6 +18,8 @@ class UserIdentity extends CUserIdentity
 	public function authenticate()
 	{
 		$user=User::model()->findByAttributes(array('login'=>$this->username));
+		// Uncomment to use default authentication
+		/*
 		$users=array(
 			// username => password
 			'demo'=>'demo',
@@ -30,6 +32,7 @@ class UserIdentity extends CUserIdentity
 		else
 			$this->errorCode=self::ERROR_NONE;
 		return !$this->errorCode;
+		*/
 		if($user==null)
 			$this->errorCode=self::ERROR_USERNAME_INVALID;
 		elseif($user->password!==md5($this->password))

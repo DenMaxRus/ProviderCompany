@@ -1,6 +1,6 @@
 <?php
 $this->breadcrumbs=array(
-	'Users'=>array('index'),
+	'Клиенты'=>array('index'),
 	$model->id,
 );
 
@@ -20,7 +20,6 @@ $this->menu=array(
 	'attributes'=>array(
 		'id',
 		'login',
-		'password',
 		'firstname',
 		'lastname',
 		'role',

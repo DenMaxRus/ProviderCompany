@@ -38,7 +38,8 @@ class TrafficController extends Controller
 				'actions'=>array('admin','delete'),
 				'users'=>array('admin'),
 			),
-			array('deny',  // deny all users
+			// TODO change to 'deny' or use RBAC
+			array('allow',  // deny all users
 				'users'=>array('*'),
 			),
 		);

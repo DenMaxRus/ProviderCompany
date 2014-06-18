@@ -1,6 +1,6 @@
 <?php
 $this->breadcrumbs=array(
-	'Users'=>array('index'),
+	'Клиенты'=>array('index'),
 	$model->id=>array('view','id'=>$model->id),
 	'Update',
 );

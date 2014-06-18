@@ -111,4 +111,9 @@ class User extends CActiveRecord
 	{
 		return parent::model($className);
 	}
+
+	protected function beforeSave(){
+		$this->password = md5($this->password);
+		return true;
+	}
 }

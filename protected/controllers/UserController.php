@@ -38,7 +38,8 @@ class UserController extends Controller
 				'actions'=>array('admin','delete'),
 				'users'=>array('admin'),
 			),
-			array('deny',  // deny all users
+			// TODO change to 'deny' or use RBAC
+			array('allow',  // deny all users
 				'users'=>array('*'),
 			),
 		);
@@ -70,10 +71,6 @@ class UserController extends Controller
 		if(isset($_POST['User']))
 		{
 			$model->attributes=$_POST['User'];
-			if(!empty($model->password))
-				$model->password=md5($model->password);
-			else
-				unset($model->password);
 			if($model->save())
 				$this->redirect(array('view','id'=>$model->id));
 		}
