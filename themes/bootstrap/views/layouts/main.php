@@ -13,7 +13,7 @@
 </head>
 
 <body>
-
+<!-- menu -->
 <?php $this->widget('bootstrap.widgets.TbNavbar',array(
 	'type'=>'inverse',
     'items'=>array(
@@ -24,11 +24,11 @@
                 array('label'=>'На главную', 'url'=>array('/site/index')),
                 array('label'=>'О сайте', 'url'=>array('/site/page', 'view'=>'about')),
                 array('label'=>'Контакты', 'url'=>array('/site/contact')),
-                array('label'=>'Логин', 'url'=>array('/site/login'), 'visible'=>Yii::app()->user->isGuest,),
+                array('label'=>'Логин', 'url'=>array('/site/login'), 'visible'=>Yii::app()->user->isGuest),
             	array('label'=>'Функции', 'items'=>array(
-					array('label'=>'Общая плата за месяц', 'url'=>array('/site/workinprogress', 'id'=>Yii::app()->user->id)),
-					array('label'=>'Задолженность', 'url'=>array('/site/workinprogress', 'id'=>Yii::app()->user->id)),
-					array('label'=>'Выручка по услугам', 'url'=>array('/site/workinprogress'), /*'visible'=>Yii::app()->user->isGuest,/*'visible'=>Yii::app()->user->checkAccess('profit'),*/),
+					array('label'=>'Общая плата за месяц', 'url'=>array('/site/workInProgress', 'id'=>Yii::app()->user->model->id)),
+					array('label'=>'Задолженность', 'url'=>array('/functions/debt', 'id'=>Yii::app()->user->model->id)),
+					array('label'=>'Выручка по услугам', 'url'=>array('/functions/serviceProfit'), /*'visible'=>Yii::app()->user->isGuest/*'visible'=>Yii::app()->user->checkAccess('profit')*/),
             		), /*'visible'=>!Yii::app()->user->isGuest,*/
 				),
             	array('label'=>'Работа с таблицами','items'=>array(
@@ -37,9 +37,9 @@
                     array('label'=>'Контракты', 'url'=>array('/contract/admin')),
                     array('label'=>'Трафик', 'url'=>array('/traffic/admin')),
 					array('label'=>'Операции', 'url'=>array('/operation/admin')),
-					), /*'visible'=>Yii::app()->user->isGuest,/*'visible'=>Yii::app()->user->checkAccess('editTables'),*/
+					), /*'visible'=>Yii::app()->user->isGuest,/*'visible'=>Yii::app()->user->checkAccess('editTables')*/
 				),
-                array('label'=>'Выход ('.Yii::app()->user->model->firstname.' '.Yii::app()->user->model->lastname.')', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest,)
+                array('label'=>'Выход ('.Yii::app()->user->model->firstname.' '.Yii::app()->user->model->lastname.')', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest)
             ),
         ),
     ),

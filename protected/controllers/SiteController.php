@@ -107,7 +107,7 @@ class SiteController extends Controller
 		$this->redirect(Yii::app()->homeUrl);
 	}
 
-	public  function  actionWorkInProgress(){
+	public function actionWorkInProgress(){
 		$this->render('workinprogress');
 	}
 }
