@@ -49,20 +49,25 @@ class FunctionsController extends Controller {
 		$this->render('profit');
 	}
 
-	public function actionChart(){
-		// TODO move to funtion on change
-		$dataProvider = new CArrayDataProvider(Functions::getServiceProfit(), array(
-			'id'=>'serviceProfit',
-			'sort'=>array(
-				'attributes'=>array(
-					'id',
-					'name',
-					'profit'
-				),
-			),
-		));
-		$this->render('chart', array(
-			'dataProvider'=>$dataProvider->getData(),
+	public function actionShowServiceProfitChart(){
+		// TODO move to function or change
+		$dateStart = new DateTime();
+		$dateEnd = new DateTime();
+		$dateEnd->modify('+1 month');
+		if(!empty($_POST["dateStart"]))
+			$dateStart->modify($_POST["dateStart"]);
+		if(!empty($_POST["dateEnd"]))
+			$dateEnd->modify($_POST["dateEnd"]);
+		$dateInterval = new DateInterval('P1M');
+		$period = new DatePeriod($dateStart, $dateInterval, $dateEnd);
+		$dataProvider = Functions::getServiceProfit($period);
+		/*print $dateStart->format('Y-m-d').' '.$dateEnd->format('Y-m-d');
+		print '<pre>';
+		print_r($dataProvider);
+		print '</pre>';*/
+		$this->render('serviceProfitChart', array(
+			'labels'=>$dataProvider['dates'],
+			'data'=>$dataProvider['profit'],
 		));
 	}
 }

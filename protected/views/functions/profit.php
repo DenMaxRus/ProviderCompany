@@ -1,9 +1,9 @@
 <?php
 $this->breadcrumbs=array(
 	'Фукции'=>'#',
-	'Задолженность',
+	'Выручка по услугам',
 );
 
 $this->menu=array(
-	array('label'=>'График','url'=>array('chart')),
+	array('label'=>'График выручки','url'=>array('showServiceProfitChart')),
 ); ?>
