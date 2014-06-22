@@ -46,18 +46,19 @@ class FunctionsController extends Controller {
 	}
 
 	public function actionServiceProfit(){
-		$this->render('profit');
+		$this->render('servicesProfit');
 	}
 
 	public function actionShowServiceProfitChart(){
 		// TODO move to function or change
 		$dateStart = new DateTime();
 		$dateEnd = new DateTime();
-		$dateEnd->modify('+1 month');
 		if(!empty($_POST["dateStart"]))
 			$dateStart->modify($_POST["dateStart"]);
 		if(!empty($_POST["dateEnd"]))
 			$dateEnd->modify($_POST["dateEnd"]);
+		if($dateStart->format('Ym') == $dateEnd->format('Ym'))
+			$dateEnd->modify('+1 month');
 		$dateInterval = new DateInterval('P1M');
 		$period = new DatePeriod($dateStart, $dateInterval, $dateEnd);
 		$dataProvider = Functions::getServiceProfit($period);
@@ -65,9 +66,10 @@ class FunctionsController extends Controller {
 		print '<pre>';
 		print_r($dataProvider);
 		print '</pre>';*/
-		$this->render('serviceProfitChart', array(
+		$this->render('servicesProfitChart', array(
 			'labels'=>$dataProvider['dates'],
 			'data'=>$dataProvider['profit'],
+			'colors'=>$dataProvider['colors'],
 		));
 	}
 }

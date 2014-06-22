@@ -2974,3 +2974,69 @@ Stack trace:
 REQUEST_URI=/index.php?r=functions/showServiceProfitChart
 in E:\site\localhost\www\enterprise\protected\controllers\FunctionsController.php (79)
 in E:\site\localhost\www\enterprise\index.php (13)
+2014/06/22 11:59:23 [error] [php] Undefined index: dates (E:\site\localhost\www\enterprise\protected\controllers\FunctionsController.php:69)
+Stack trace:
+#0 E:\site\localhost\www\yii\framework\web\CController.php(286): FunctionsController->runAction()
+#1 E:\site\localhost\www\yii\framework\web\CController.php(265): FunctionsController->runActionWithFilters()
+#2 E:\site\localhost\www\yii\framework\web\CWebApplication.php(282): FunctionsController->run()
+#3 E:\site\localhost\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 E:\site\localhost\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#5 E:\site\localhost\www\enterprise\index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php?r=functions/showServiceProfitChart
+in E:\site\localhost\www\enterprise\protected\controllers\FunctionsController.php (69)
+in E:\site\localhost\www\enterprise\index.php (13)
+2014/06/22 11:59:28 [error] [php] Undefined index: dates (E:\site\localhost\www\enterprise\protected\controllers\FunctionsController.php:69)
+Stack trace:
+#0 E:\site\localhost\www\yii\framework\web\CController.php(286): FunctionsController->runAction()
+#1 E:\site\localhost\www\yii\framework\web\CController.php(265): FunctionsController->runActionWithFilters()
+#2 E:\site\localhost\www\yii\framework\web\CWebApplication.php(282): FunctionsController->run()
+#3 E:\site\localhost\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 E:\site\localhost\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#5 E:\site\localhost\www\enterprise\index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php?r=functions/showServiceProfitChart
+in E:\site\localhost\www\enterprise\protected\controllers\FunctionsController.php (69)
+in E:\site\localhost\www\enterprise\index.php (13)
+2014/06/22 12:25:45 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "chart".' in E:\site\localhost\www\yii\framework\web\CController.php:483
+Stack trace:
+#0 E:\site\localhost\www\yii\framework\web\CController.php(270): CController->missingAction('chart')
+#1 E:\site\localhost\www\yii\framework\web\CWebApplication.php(282): CController->run('chart')
+#2 E:\site\localhost\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('functions/chart')
+#3 E:\site\localhost\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 E:\site\localhost\www\enterprise\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php?r=functions/chart
+HTTP_REFERER=http://enterprise.com/index.php?r=functions/serviceProfit
+---
+2014/06/22 12:39:47 [error] [php] Undefined index: dates (E:\site\localhost\www\enterprise\protected\controllers\FunctionsController.php:70)
+Stack trace:
+#0 E:\site\localhost\www\yii\framework\web\CController.php(286): FunctionsController->runAction()
+#1 E:\site\localhost\www\yii\framework\web\CController.php(265): FunctionsController->runActionWithFilters()
+#2 E:\site\localhost\www\yii\framework\web\CWebApplication.php(282): FunctionsController->run()
+#3 E:\site\localhost\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 E:\site\localhost\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#5 E:\site\localhost\www\enterprise\index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php?r=functions/showServiceProfitChart
+in E:\site\localhost\www\enterprise\protected\controllers\FunctionsController.php (70)
+in E:\site\localhost\www\enterprise\index.php (13)
+2014/06/22 13:23:51 [error] [php] Undefined index: dates (E:\site\localhost\www\enterprise\protected\controllers\FunctionsController.php:70)
+Stack trace:
+#0 E:\site\localhost\www\yii\framework\web\CController.php(286): FunctionsController->runAction()
+#1 E:\site\localhost\www\yii\framework\web\CController.php(265): FunctionsController->runActionWithFilters()
+#2 E:\site\localhost\www\yii\framework\web\CWebApplication.php(282): FunctionsController->run()
+#3 E:\site\localhost\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 E:\site\localhost\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#5 E:\site\localhost\www\enterprise\index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php?r=functions/showServiceProfitChart
+in E:\site\localhost\www\enterprise\protected\controllers\FunctionsController.php (70)
+in E:\site\localhost\www\enterprise\index.php (13)
+2014/06/22 13:24:00 [error] [php] Undefined index: dates (E:\site\localhost\www\enterprise\protected\controllers\FunctionsController.php:70)
+Stack trace:
+#0 E:\site\localhost\www\yii\framework\web\CController.php(286): FunctionsController->runAction()
+#1 E:\site\localhost\www\yii\framework\web\CController.php(265): FunctionsController->runActionWithFilters()
+#2 E:\site\localhost\www\yii\framework\web\CWebApplication.php(282): FunctionsController->run()
+#3 E:\site\localhost\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 E:\site\localhost\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#5 E:\site\localhost\www\enterprise\index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php?r=functions/showServiceProfitChart
+in E:\site\localhost\www\enterprise\protected\controllers\FunctionsController.php (70)
+in E:\site\localhost\www\enterprise\index.php (13)
